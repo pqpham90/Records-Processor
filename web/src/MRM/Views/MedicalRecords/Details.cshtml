@@ -1,0 +1,138 @@
+@model MRM.Models.MedicalRecord
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MedicalRecord</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AdmittingDoctor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdmittingDoctor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AttendingDoctor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AttendingDoctor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Contrast)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contrast)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DirectorName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DirectorName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dob)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dob)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ExamDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FacilityId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FacilityId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FacilityLocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FacilityLocation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FacilityName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FacilityName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Laterality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Laterality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfFilms)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfFilms)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderingPh)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrderingPh)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatientId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Procedure)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Procedure)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Radiologist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Radiologist)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reason)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reason)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReportStatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,15 @@
+@model MRM.Models.MedicalRecord
+
+@{
+    ViewData["Title"] = "Upload";
+}
+
+<h2>Upload</h2>
+
+<form novalidate method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Add Records from File</label>
+        <input type="file" class="btn-file" id="file" name="file" multiple />
+        <input type="submit" class="btn btn-success btn-sm" id="Upload" value="Upload" />
+    </div>
+</form>

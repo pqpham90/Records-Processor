@@ -1,0 +1,113 @@
+@model IEnumerable<MRM.Models.MedicalRecord>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/lib/tablesorter/themes/blue/style.css"/>
+
+@section scripts {
+    <script src="~/lib/tablesorter/jquery-latest.js"></script>
+    <script src="~/lib/tablesorter/jquery.tablesorter.min.js"></script>
+    <script src="~/js/tablesort.js"></script>
+}
+
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Upload">Create From File</a>
+</p>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<input type="text" id="search" placeholder="Type to search..." />
+<table id="recordsTable" class="table tablesorter">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FacilityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Procedure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfFilms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Laterality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contrast)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExamDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Radiologist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderingPh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReportStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FacilityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Procedure)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfFilms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Laterality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contrast)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExamDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Radiologist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderingPh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReportStatus)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
